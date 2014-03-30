@@ -5,12 +5,11 @@ espowerify
 [![NPM version](https://badge.fury.io/js/espowerify.png)](http://badge.fury.io/js/espowerify)
 [![Dependency Status](https://gemnasium.com/twada/espowerify.png)](https://gemnasium.com/twada/espowerify)
 
-Power Assert transformer for browserify.
-
+Browserify transform for power-assert.
 
 DESCRIPTION
 ---------------------------------------
-`espowerify` is a Power Assert transformer for browserify.
+`espowerify` is a browserify transform for power-assert.
 
 `espowerify` applies [espower](http://github.com/twada/espower) to target sources through browserify transform chain. `espower` manipulates assertion expression (JavaScript Code) represented as [Mozilla JavaScript AST](https://developer.mozilla.org/en-US/docs/SpiderMonkey/Parser_API), to instrument power-assert feature into the code.
 

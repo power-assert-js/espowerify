@@ -1,7 +1,7 @@
 {
   "name": "espowerify",
   "version": "0.1.0",
-  "description": "Power Assert transformer for browserify",
+  "description": "Browserify transform for power-assert",
   "keywords": [
     "test",
     "assert",
