@@ -7,6 +7,7 @@ espowerify
 
 Browserify transform for power-assert.
 
+
 DESCRIPTION
 ---------------------------------------
 `espowerify` is a browserify transform for power-assert.
