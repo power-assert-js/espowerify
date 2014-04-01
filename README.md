@@ -14,7 +14,7 @@ DESCRIPTION
 
 `espowerify` applies [espower](http://github.com/twada/espower) to target sources through browserify transform chain. `espower` manipulates assertion expression (JavaScript Code) represented as [Mozilla JavaScript AST](https://developer.mozilla.org/en-US/docs/SpiderMonkey/Parser_API), to instrument power-assert feature into the code.
 
-Please note that `espowerify` is an alpha version product. Pull-requests, issue reports and patches are always welcomed.
+Please note that `espowerify` is a beta version product. Pull-requests, issue reports and patches are always welcomed.
 
 See [power-assert](http://github.com/twada/power-assert) project for more documentation.
 
