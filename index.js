@@ -16,10 +16,11 @@ var through = require('through'),
 /**
  * Apply espower through the browserify transform chain.
  * 
- * @param {String} file
+ * @param {String} filepath
+ * @param {Object} options
  * @return {Stream}
  */
-module.exports = function (filepath) {
+function espowerify(filepath, options) {
     'use strict';
 
     var data = '',
@@ -33,7 +34,7 @@ module.exports = function (filepath) {
         var espowerOptions, modifiedAst,
             jsCode = data,
             jsAst = esprima.parse(jsCode, {tolerant: true, loc: true, range: true, tokens: true});
-        espowerOptions = merge(espower.defaultOptions(), {
+        espowerOptions = merge(merge(espower.defaultOptions(), options), {
             path: filepath,
             source: jsCode
         });
@@ -43,4 +44,6 @@ module.exports = function (filepath) {
     }
 
     return stream;
-};
+}
+
+module.exports = espowerify;
