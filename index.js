@@ -33,8 +33,9 @@ function espowerify(filepath, options) {
     function end() {
         var espowerOptions, modifiedAst,
             jsCode = data,
-            jsAst = esprima.parse(jsCode, {tolerant: true, loc: true, range: true, tokens: true});
+            jsAst = esprima.parse(jsCode, {tolerant: true, loc: true, tokens: true});
         espowerOptions = merge(merge(espower.defaultOptions(), options), {
+            destructive: true,
             path: filepath,
             source: jsCode
         });

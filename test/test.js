@@ -29,7 +29,6 @@ describe('espowerify with customized options', function() {
     var stream = espowerify(
         'test/fixtures/customized.js',
         {
-            destructive: true,
             powerAssertVariableName: 'refute',
             targetMethods: {
                 oneArg: [
