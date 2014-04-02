@@ -11,11 +11,12 @@ var through = require('through'),
     espower = require('espower'),
     esprima = require('esprima'),
     escodegen = require('escodegen'),
-    merge = require('lodash.merge');
+    merge = require('lodash.merge'),
+    sourceMap = require('convert-source-map');
 
 /**
  * Apply espower through the browserify transform chain.
- * 
+ *
  * @param {String} filepath
  * @param {Object} options
  * @return {Stream}
@@ -31,16 +32,23 @@ function espowerify(filepath, options) {
     }
 
     function end() {
-        var espowerOptions, modifiedAst,
+        var espowerOptions, modifiedAst, generatedOutput, code, map,
             jsCode = data,
-            jsAst = esprima.parse(jsCode, {tolerant: true, loc: true, tokens: true});
+            jsAst = esprima.parse(jsCode, {tolerant: true, loc: true, tokens: true, source: filepath});
         espowerOptions = merge(merge(espower.defaultOptions(), options), {
             destructive: true,
             path: filepath,
             source: jsCode
         });
         modifiedAst = espower(jsAst, espowerOptions);
-        stream.queue(escodegen.generate(modifiedAst));
+        generatedOutput = escodegen.generate(modifiedAst, {
+            sourceMap: true,
+            sourceMapWithCode: true
+        });
+        code = generatedOutput.code; // Generated source code
+        map = sourceMap.fromJSON(generatedOutput.map);
+        map.sourcemap.sourcesContent = [jsCode];
+        stream.queue(code + '\n' + map.toComment() + '\n');
         stream.queue(null);
     }
 
