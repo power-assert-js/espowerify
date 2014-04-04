@@ -35,13 +35,13 @@
     "test": "./node_modules/mocha/bin/mocha"
   },
   "dependencies": {
-    "espower-source": "^0.4.0",
-    "through": "^2.3.4"
+    "espower-source": "~0.4.1",
+    "through": "~2.3.4"
   },
   "devDependencies": {
-    "expect.js": "^0.3.1",
-    "jshint": "^2.4.4",
-    "mocha": "^1.18.2"
+    "expect.js": "~0.3.1",
+    "jshint": "~2.4.4",
+    "mocha": "~1.18.2"
   },
   "engines": {
     "node": ">=0.8.0",

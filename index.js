@@ -1,4 +1,4 @@
-/*
+/**
  * espowerify - Browserify transform for power-assert.
  * 
  * https://github.com/twada/espowerify
