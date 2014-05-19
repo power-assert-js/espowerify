@@ -5,7 +5,7 @@
  *
  * Copyright (c) 2014 Takuto Wada
  * Licensed under the MIT license.
- *   https://raw.github.com/twada/espowerify/master/MIT-LICENSE.txt
+ *   https://github.com/twada/espowerify/blob/master/MIT-LICENSE.txt
  */
 var through = require('through'),
     espowerSourceToSource = require('espower-source');

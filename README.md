@@ -93,4 +93,4 @@ CONTRIBUTORS
 
 LICENSE
 ---------------------------------------
-Licensed under the [MIT](https://raw.github.com/twada/espowerify/master/MIT-LICENSE.txt) license.
+Licensed under the [MIT](https://github.com/twada/espowerify/blob/master/MIT-LICENSE.txt) license.
