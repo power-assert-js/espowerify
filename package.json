@@ -26,6 +26,13 @@
     }
   ],
   "main": "./index.js",
+  "files": [
+    "MIT-LICENSE.txt",
+    "README.md",
+    "index.js",
+    "package.json",
+    "test"
+  ],
   "repository": {
     "type": "git",
     "url": "git://github.com/twada/espowerify.git"
@@ -40,7 +47,7 @@
   },
   "devDependencies": {
     "jshint": "~2.5.1",
-    "mocha": "~1.20.0"
+    "mocha": "~1.20.1"
   },
   "engines": {
     "node": ">=0.8.0",
