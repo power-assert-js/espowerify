@@ -29,15 +29,11 @@ describe('espowerify with customized options', function() {
     var stream = espowerify(
         'test/fixtures/customized.js',
         {
-            powerAssertVariableName: 'refute',
-            targetMethods: {
-                oneArg: [
-                    'isNull'
-                ],
-                twoArgs: [
-                    'same'
-                ]
-            }
+            patterns: [
+                'refute(actual, [message])',
+                'refute.same(actual, expected, [message])',
+                'refute.isNull(object, [message])'
+            ]
         });
     
     it('should return a stream', function() {
