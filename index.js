@@ -8,7 +8,7 @@
  *   https://github.com/twada/espowerify/blob/master/MIT-LICENSE.txt
  */
 var through = require('through'),
-    espowerSourceToSource = require('espower-source');
+    espowerSource = require('espower-source');
 
 /**
  * Apply espower through the browserify transform chain.
@@ -28,7 +28,7 @@ function espowerify(filepath, options) {
     }
 
     function end() {
-        stream.queue(espowerSourceToSource(data, filepath, options));
+        stream.queue(espowerSource(data, filepath, options));
         stream.queue(null);
     }
 
