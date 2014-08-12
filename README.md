@@ -19,6 +19,11 @@ Please note that `espowerify` is a beta version product. Pull-requests, issue re
 See [power-assert](http://github.com/twada/power-assert) project for more documentation.
 
 
+CHANGELOG
+---------------------------------------
+See [CHANGELOG](https://github.com/twada/espowerify/blob/master/CHANGELOG.md)
+
+
 HOW TO USE
 ---------------------------------------
 First, install `power-assert` and `espowerify` via npm.
