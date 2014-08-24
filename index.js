@@ -15,11 +15,11 @@ var through = require('through'),
     escodegen = require('escodegen'),
     extend = require('xtend'),
     convert = require('convert-source-map'),
+    transfer = require('multi-stage-sourcemap').transfer,
     sm = require('source-map'),
     SourceMapGenerator = sm.SourceMapGenerator,
     SourceMapConsumer = sm.SourceMapConsumer;
 
-// borrowed from vinyl-sourcemaps-apply
 function mergeSourceMap(incomingSourceMap, outgoingSourceMap) {
     if (typeof outgoingSourceMap === 'string' || outgoingSourceMap instanceof String) {
         outgoingSourceMap = JSON.parse(outgoingSourceMap);
@@ -27,9 +27,7 @@ function mergeSourceMap(incomingSourceMap, outgoingSourceMap) {
     if (!incomingSourceMap) {
         return outgoingSourceMap;
     }
-    var generator = SourceMapGenerator.fromSourceMap(new SourceMapConsumer(outgoingSourceMap));
-    generator.applySourceMap(new SourceMapConsumer(incomingSourceMap));
-    return JSON.parse(generator.toString());
+    return JSON.parse(transfer({fromSourceMap: outgoingSourceMap, toSourceMap: incomingSourceMap}));
 }
 
 function handleUpstreamSourceMap (jsCode, options) {
@@ -71,7 +69,10 @@ function transform (jsCode, filepath, options) {
     var outMap = convert.fromJSON(instrumented.map.toString());
     if (inMap) {
         var mergedRawMap = mergeSourceMap(inMap, outMap.toObject());
-        return instrumented.code + '\n' + convert.fromObject(mergedRawMap).toComment() + '\n';
+        var reMap = convert.fromObject(mergedRawMap);
+        reMap.setProperty('sources', inMap.sources);
+        reMap.setProperty('sourcesContent', inMap.sourcesContent);
+        return instrumented.code + '\n' + reMap.toComment() + '\n';
     } else {
         outMap.setProperty('sources', [filepath]);
         outMap.setProperty('sourcesContent', [jsCode]);
