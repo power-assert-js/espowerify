@@ -39,8 +39,7 @@
     "url": "git://github.com/twada/espowerify.git"
   },
   "scripts": {
-    "jshint": "jshint index.js",
-    "test": "mocha"
+    "test": "jshint index.js && mocha"
   },
   "dependencies": {
     "convert-source-map": "~0.4.1",

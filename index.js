@@ -15,10 +15,7 @@ var through = require('through'),
     escodegen = require('escodegen'),
     extend = require('xtend'),
     convert = require('convert-source-map'),
-    transfer = require('multi-stage-sourcemap').transfer,
-    sm = require('source-map'),
-    SourceMapGenerator = sm.SourceMapGenerator,
-    SourceMapConsumer = sm.SourceMapConsumer;
+    transfer = require('multi-stage-sourcemap').transfer;
 
 function mergeSourceMap(incomingSourceMap, outgoingSourceMap) {
     if (typeof outgoingSourceMap === 'string' || outgoingSourceMap instanceof String) {
