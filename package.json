@@ -39,12 +39,17 @@
     "url": "git://github.com/twada/espowerify.git"
   },
   "scripts": {
-    "jshint": "jshint index.js",
-    "test": "mocha"
+    "test": "jshint index.js && mocha"
   },
   "dependencies": {
-    "espower-source": "~0.8.0",
-    "through": "~2.3.4"
+    "convert-source-map": "~0.4.1",
+    "escodegen": "~1.3.3",
+    "espower": "~0.9.0",
+    "esprima": "~1.2.2",
+    "multi-stage-sourcemap": "~0.1.1",
+    "source-map": "~0.1.38",
+    "through": "~2.3.4",
+    "xtend": "~4.0.0"
   },
   "devDependencies": {
     "jshint": "~2.5.2",
