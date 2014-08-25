@@ -71,6 +71,7 @@ function transform (jsCode, filepath, options) {
         reMap.setProperty('sourcesContent', inMap.sourcesContent);
         return instrumented.code + '\n' + reMap.toComment() + '\n';
     } else {
+        // Keeping paths absolute. Paths will be resolved by mold-source-map.
         outMap.setProperty('sources', [filepath]);
         outMap.setProperty('sourcesContent', [jsCode]);
         return instrumented.code + '\n' + outMap.toComment() + '\n';
