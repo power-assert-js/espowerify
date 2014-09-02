@@ -1,3 +1,11 @@
+### 0.9.1 (2014-09-02)
+
+
+#### Features
+
+* **espowerify:** use espower-source directly since espower-source 0.9.0 is backported from espowerify ([625cf55d](https://github.com/twada/espowerify/commit/625cf55d5b73893f4babd00c07489590ef786be0))
+
+
 ## 0.9.0 (2014-08-25)
 
 
