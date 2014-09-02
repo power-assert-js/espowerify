@@ -50,7 +50,7 @@ or programmatically,
 var source = require('vinyl-source-stream');
 var browserify = require('browserify');
 
-gulp.task('build_test, function() {
+gulp.task('build_test', function() {
     var b = browserify({entries: './test/web/*test.js'});
     b.transform('espowerify');
     return b.bundle()
@@ -73,15 +73,15 @@ This allows debugging the original code when using the debug flag `-d` with brow
 
     $ browserify -d -t espowerify test/your_test.js > dist/your_test_with_sourcemaps.js
 
-or programmatically,
+or programmatically (see `debug: true` option),
 
 ```javascript
 var source = require('vinyl-source-stream');
 var browserify = require('browserify');
 var mold = require('mold-source-map');
 
-gulp.task('build_test, function() {
-    var b = browserify({entries: './test/web/*test.js'});
+gulp.task('build_test', function() {
+    var b = browserify({entries: './test/web/*test.js', debug: true});
     b.transform('espowerify');
     return b.bundle()
         .pipe(mold.transformSourcesRelativeTo(__dirname))
