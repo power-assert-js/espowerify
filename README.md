@@ -40,11 +40,57 @@ Second, require `power-assert` in your test.
 
 Third, apply `espowerify` through browserify transform.
 
+by command-line,
+
     $ browserify -t espowerify test/your_test.js > dist/your_test.js
+
+or programmatically,
+
+```javascript
+var source = require('vinyl-source-stream');
+var browserify = require('browserify');
+
+gulp.task('build_test, function() {
+    var b = browserify({entries: './test/web/*test.js'});
+    b.transform('espowerify');
+    return b.bundle()
+        .pipe(source('all_test.js'))
+        .pipe(gulp.dest('./build'));
+});
+```
 
 Lastly, run your test in your way. For example,
 
     $ mocha-phantomjs path/to/test.html
+
+
+SOURCE MAPS
+---------------------------------------
+
+espowerify supports source maps. espowerify generates source maps with all original sources inlined then adds the resulting source map base64 encoded to the bottom of the transformed code.
+
+This allows debugging the original code when using the debug flag `-d` with browserify.
+
+    $ browserify -d -t espowerify test/your_test.js > dist/your_test_with_sourcemaps.js
+
+or programmatically,
+
+```javascript
+var source = require('vinyl-source-stream');
+var browserify = require('browserify');
+var mold = require('mold-source-map');
+
+gulp.task('build_test, function() {
+    var b = browserify({entries: './test/web/*test.js'});
+    b.transform('espowerify');
+    return b.bundle()
+        .pipe(mold.transformSourcesRelativeTo(__dirname))
+        .pipe(source('all_test.js'))
+        .pipe(gulp.dest('./build'));
+});
+```
+
+If the debug flag is not set, these source maps will be removed by browserify and thus will not be contained inside your bundle.
 
 
 API
