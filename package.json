@@ -42,7 +42,7 @@
     "test": "jshint index.js && mocha"
   },
   "dependencies": {
-    "espower-source": "~0.9.0",
+    "espower-source": "~0.9.1",
     "through": "~2.3.4"
   },
   "devDependencies": {
