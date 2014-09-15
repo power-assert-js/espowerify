@@ -46,7 +46,7 @@
     "through": "~2.3.4"
   },
   "devDependencies": {
-    "jshint": "~2.5.2",
+    "jshint": "~2.5.5",
     "mocha": "~1.21.4"
   },
   "engines": {
