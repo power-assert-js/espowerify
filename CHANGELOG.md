@@ -1,3 +1,11 @@
+### 0.9.2 (2014-09-15)
+
+
+#### Features
+
+* **espowerify:** update espower-source to 0.9.1 ([01e3abae](https://github.com/twada/espowerify/commit/01e3abae68ed3c4801de6d2198f276a9cd7390b3))
+
+
 ### 0.9.1 (2014-09-02)
 
 
