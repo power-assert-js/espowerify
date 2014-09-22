@@ -1,46 +1,19 @@
 {
   "name": "espowerify",
-  "version": "0.9.2",
   "description": "Browserify transform for power-assert",
-  "keywords": [
-    "power-assert",
-    "test",
-    "assert",
-    "testing",
-    "ast",
-    "browserify-transform",
-    "browserify",
-    "transform"
-  ],
-  "homepage": "https://github.com/twada/espowerify",
-  "bugs": "https://github.com/twada/espowerify/issues",
+  "version": "0.9.2",
   "author": {
     "name": "Takuto Wada",
     "email": "takuto.wada@gmail.com",
     "url": "https://github.com/twada"
   },
+  "bugs": "https://github.com/twada/espowerify/issues",
   "contributors": [
     {
       "name": "azu",
       "url": "https://github.com/azu"
     }
   ],
-  "main": "./index.js",
-  "files": [
-    "MIT-LICENSE.txt",
-    "CHANGELOG.md",
-    "README.md",
-    "index.js",
-    "package.json",
-    "test"
-  ],
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/twada/espowerify.git"
-  },
-  "scripts": {
-    "test": "jshint index.js && mocha"
-  },
   "dependencies": {
     "espower-source": "~0.9.1",
     "through": "~2.3.4"
@@ -53,10 +26,35 @@
     "node": ">=0.8.0",
     "npm": ">=1.2.10"
   },
-  "licenses": [
-    {
-      "type": "MIT",
-      "url": "https://github.com/twada/espowerify/blob/master/MIT-LICENSE.txt"
-    }
-  ]
+  "files": [
+    "MIT-LICENSE.txt",
+    "CHANGELOG.md",
+    "README.md",
+    "index.js",
+    "package.json",
+    "test"
+  ],
+  "homepage": "https://github.com/twada/espowerify",
+  "keywords": [
+    "power-assert",
+    "assert",
+    "assertion",
+    "test",
+    "testing",
+    "browserify-transform",
+    "browserify",
+    "transform"
+  ],
+  "license": {
+    "type": "MIT",
+    "url": "https://github.com/twada/espowerify/blob/master/MIT-LICENSE.txt"
+  },
+  "main": "./index.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/twada/espowerify.git"
+  },
+  "scripts": {
+    "test": "jshint index.js && mocha"
+  }
 }
