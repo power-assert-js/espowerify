@@ -49,15 +49,18 @@ or programmatically,
 ```javascript
 var source = require('vinyl-source-stream');
 var browserify = require('browserify');
+var glob = require('glob'),
 
 gulp.task('build_test', function() {
-    var b = browserify({entries: './test/*test.js'});
+    var files = glob.sync('./test/*_test.js');
+    var b = browserify({entries: files, debug: true});
     b.transform('espowerify');
     return b.bundle()
         .pipe(source('all_test.js'))
         .pipe(gulp.dest('./build'));
 });
 ```
+(Note that files are transformed if matches to `entries`)
 
 Lastly, run your test in your way. For example,
 
@@ -78,10 +81,12 @@ or programmatically (see `debug: true` option),
 ```javascript
 var source = require('vinyl-source-stream');
 var browserify = require('browserify');
+var glob = require('glob'),
 var mold = require('mold-source-map');
 
 gulp.task('build_test', function() {
-    var b = browserify({entries: './test/*test.js', debug: true});
+    var files = glob.sync('./test/*_test.js');
+    var b = browserify({entries: files, debug: true});
     b.transform('espowerify');
     return b.bundle()
         .pipe(mold.transformSourcesRelativeTo(__dirname))
