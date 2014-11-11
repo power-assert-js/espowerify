@@ -1,3 +1,13 @@
+## [0.10.0](https://github.com/twada/espowerify/releases/tag/v0.10.0) (2014-11-11)
+
+
+#### Features
+
+* **espowerify:**
+  * transform file if and only if it is listed in browserify entries ([80b1841f](https://github.com/twada/espowerify/commit/80b1841f02caf9ceac418aa3c69647f6ab8c4029))
+  * update espower-source to 0.10.0 ([1bbe5f35](https://github.com/twada/espowerify/commit/1bbe5f355a57c75f2bd56c38232f0a7d8614060e))
+
+
 ### 0.9.2 (2014-09-15)
 
 
