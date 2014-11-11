@@ -15,12 +15,12 @@
     }
   ],
   "dependencies": {
-    "espower-source": "~0.9.1",
-    "through": "~2.3.4"
+    "espower-source": "~0.10.0",
+    "through": "~2.3.6"
   },
   "devDependencies": {
-    "jshint": "~2.5.5",
-    "mocha": "~1.21.4"
+    "jshint": "~2.5.8",
+    "mocha": "~2.0.1"
   },
   "engines": {
     "node": ">=0.8.0",
