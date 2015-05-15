@@ -1,11 +1,11 @@
 /**
  * espowerify - Browserify transform for power-assert.
  * 
- * https://github.com/twada/espowerify
+ * https://github.com/power-assert-js/espowerify
  *
  * Copyright (c) 2014-2015 Takuto Wada
  * Licensed under the MIT license.
- *   https://github.com/twada/espowerify/blob/master/MIT-LICENSE.txt
+ *   https://github.com/power-assert-js/espowerify/blob/master/MIT-LICENSE.txt
  */
 'use strict';
 

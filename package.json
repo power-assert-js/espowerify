@@ -7,7 +7,7 @@
     "email": "takuto.wada@gmail.com",
     "url": "https://github.com/twada"
   },
-  "bugs": "https://github.com/twada/espowerify/issues",
+  "bugs": "https://github.com/power-assert-js/espowerify/issues",
   "contributors": [
     {
       "name": "azu",
@@ -34,7 +34,7 @@
     "package.json",
     "test"
   ],
-  "homepage": "https://github.com/twada/espowerify",
+  "homepage": "https://github.com/power-assert-js/espowerify",
   "keywords": [
     "power-assert",
     "assert",
@@ -47,12 +47,12 @@
   ],
   "license": {
     "type": "MIT",
-    "url": "https://github.com/twada/espowerify/blob/master/MIT-LICENSE.txt"
+    "url": "https://github.com/power-assert-js/espowerify/blob/master/MIT-LICENSE.txt"
   },
   "main": "./index.js",
   "repository": {
     "type": "git",
-    "url": "git://github.com/twada/espowerify.git"
+    "url": "git://github.com/power-assert-js/espowerify.git"
   },
   "scripts": {
     "test": "jshint index.js && mocha"

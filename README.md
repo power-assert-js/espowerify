@@ -1,27 +1,27 @@
 espowerify
 ================================
 
-[![Build Status](https://travis-ci.org/twada/espowerify.svg?branch=master)](https://travis-ci.org/twada/espowerify)
+[![Build Status](https://travis-ci.org/power-assert-js/espowerify.svg?branch=master)](https://travis-ci.org/power-assert-js/espowerify)
 [![NPM version](https://badge.fury.io/js/espowerify.svg)](http://badge.fury.io/js/espowerify)
-[![Dependency Status](https://gemnasium.com/twada/espowerify.svg)](https://gemnasium.com/twada/espowerify)
+[![Dependency Status](https://gemnasium.com/power-assert-js/espowerify.svg)](https://gemnasium.com/power-assert-js/espowerify)
 
 Browserify transform for power-assert.
 
 
 DESCRIPTION
 ---------------------------------------
-`espowerify` is a [browserify](http://browserify.org/) transform for [power-assert](http://github.com/twada/power-assert).
+`espowerify` is a [browserify](http://browserify.org/) transform for [power-assert](http://github.com/power-assert-js/power-assert).
 
-`espowerify` applies [espower](http://github.com/twada/espower) to target sources through browserify transform chain. `espower` manipulates assertion expression (JavaScript Code) represented as [Mozilla JavaScript AST](https://developer.mozilla.org/en-US/docs/SpiderMonkey/Parser_API), to instrument power-assert feature into the code.
+`espowerify` applies [espower](http://github.com/power-assert-js/espower) to target sources through browserify transform chain. `espower` manipulates assertion expression (JavaScript Code) represented as [Mozilla JavaScript AST](https://developer.mozilla.org/en-US/docs/SpiderMonkey/Parser_API), to instrument power-assert feature into the code.
 
 Please note that `espowerify` is a beta version product. Pull-requests, issue reports and patches are always welcomed.
 
-See [power-assert](http://github.com/twada/power-assert) project for more documentation.
+See [power-assert](http://github.com/power-assert-js/power-assert) project for more documentation.
 
 
 CHANGELOG
 ---------------------------------------
-See [CHANGELOG](https://github.com/twada/espowerify/blob/master/CHANGELOG.md)
+See [CHANGELOG](https://github.com/power-assert-js/espowerify/blob/master/CHANGELOG.md)
 
 
 HOW TO USE
@@ -143,4 +143,4 @@ CONTRIBUTORS
 
 LICENSE
 ---------------------------------------
-Licensed under the [MIT](https://github.com/twada/espowerify/blob/master/MIT-LICENSE.txt) license.
+Licensed under the [MIT](https://github.com/power-assert-js/espowerify/blob/master/MIT-LICENSE.txt) license.
