@@ -19,6 +19,14 @@ Please note that `espowerify` is a beta version product. Pull-requests, issue re
 See [power-assert](http://github.com/power-assert-js/power-assert) project for more documentation.
 
 
+FAQ
+---------------------------------------
+
+#### espowerify does not work with babelify
+
+espowerify does not work with babel/babelify since babel 5.0 due to transpiled code change. Please [use babel-plugin-espower instead](https://github.com/power-assert-js/babel-plugin-espower#with-babelify).
+
+
 CHANGELOG
 ---------------------------------------
 See [CHANGELOG](https://github.com/power-assert-js/espowerify/blob/master/CHANGELOG.md)
