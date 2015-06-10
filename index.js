@@ -18,6 +18,9 @@ function endsWith (str, suffix) {
 }
 
 function isTransformTarget (filepath, options) {
+    if (path.extname(filepath) === '.json') {
+        return false;
+    }
     if (!options || !options._flags || !options._flags.entries) {
         return true;
     }

@@ -161,3 +161,34 @@ describe('without _flags (browserify prior to 5.13.0)', function() {
         file.pipe(stream);
     });
 });
+
+describe('when incoming code is JSON file', function() {
+    var stream = espowerify(
+        '/absolute/path/to/test/fixtures/data.json',
+        {
+            _flags: {
+                basedir: '/absolute/path/to',
+                cache: {},
+                debug: true
+            }
+        }
+    );
+    
+    it('should return a stream', function() {
+        assert(stream instanceof Stream);
+    });
+    
+    it('should not transform', function(done) {
+        var output = '', file;
+        stream.on('data', function(buf) {
+            output += buf;
+        });
+        stream.on('end', function() {
+            var expected = fs.readFileSync('test/fixtures/data.json', 'utf8');
+            assert.equal(output, expected);
+            done();
+        });
+        file = fs.createReadStream('test/fixtures/data.json');
+        file.pipe(stream);
+    });
+});
