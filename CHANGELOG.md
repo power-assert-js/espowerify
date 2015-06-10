@@ -1,3 +1,16 @@
+### [0.10.1](https://github.com/power-assert-js/espowerify/releases/tag/v0.10.1) (2015-06-10)
+
+
+#### Bug Fixes
+
+* should not transform JSON file ([405bbb60](https://github.com/power-assert-js/espowerify/commit/405bbb6012744b91955363cd3785eae42772d949))
+
+
+#### Features
+
+* transfer to power-assert-js organization ([118eed24](https://github.com/power-assert-js/espowerify/commit/118eed242c9bc672494a47012a81ec390297fce4))
+
+
 ## [0.10.0](https://github.com/power-assert-js/espowerify/releases/tag/v0.10.0) (2014-11-11)
 
 
