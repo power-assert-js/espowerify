@@ -45,10 +45,7 @@
     "browserify",
     "transform"
   ],
-  "license": {
-    "type": "MIT",
-    "url": "https://github.com/power-assert-js/espowerify/blob/master/MIT-LICENSE.txt"
-  },
+  "license": "MIT",
   "main": "./index.js",
   "repository": {
     "type": "git",
