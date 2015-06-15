@@ -11,6 +11,7 @@
 
 var through = require('through'),
     path = require('path'),
+    extend = require('xtend'),
     espowerSource = require('espower-source');
 
 function endsWith (str, suffix) {
@@ -49,7 +50,10 @@ function espowerify(filepath, options) {
     }
 
     function end() {
-        stream.queue(espowerSource(data, filepath, options));
+        var espowerOptions = extend({
+            sourceRoot: process.cwd()
+        }, options);
+        stream.queue(espowerSource(data, filepath, espowerOptions));
         stream.queue(null);
     }
 
