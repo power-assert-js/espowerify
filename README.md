@@ -89,7 +89,7 @@ or programmatically (see `debug: true` option),
 ```javascript
 var source = require('vinyl-source-stream');
 var browserify = require('browserify');
-var glob = require('glob'),
+var glob = require('glob');
 var mold = require('mold-source-map');
 
 gulp.task('build_test', function() {
