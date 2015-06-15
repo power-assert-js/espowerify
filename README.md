@@ -57,7 +57,7 @@ or programmatically,
 ```javascript
 var source = require('vinyl-source-stream');
 var browserify = require('browserify');
-var glob = require('glob'),
+var glob = require('glob');
 
 gulp.task('build_test', function() {
     var files = glob.sync('./test/*_test.js');
