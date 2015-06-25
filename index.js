@@ -9,10 +9,10 @@
  */
 'use strict';
 
-var through = require('through'),
-    path = require('path'),
-    extend = require('xtend'),
-    espowerSource = require('espower-source');
+var through = require('through');
+var path = require('path');
+var extend = require('xtend');
+var espowerSource = require('espower-source');
 
 function endsWith (str, suffix) {
     return str.slice(str.length - suffix.length) === suffix;
@@ -42,8 +42,8 @@ function espowerify(filepath, options) {
         return through();
     }
 
-    var data = '',
-        stream = through(write, end);
+    var data = '';
+    var stream = through(write, end);
 
     function write(buf) {
         data += buf;

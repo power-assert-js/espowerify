@@ -1,8 +1,8 @@
-var espowerify = require('..'),
-    convert = require('convert-source-map'),
-    fs = require('fs'),
-    Stream = require('stream'),
-    assert = require('assert');
+var espowerify = require('..');
+var convert = require('convert-source-map');
+var fs = require('fs');
+var Stream = require('stream');
+var assert = require('assert');
 
 describe('default case', function() {
     var stream = espowerify(
