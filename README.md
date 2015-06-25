@@ -12,9 +12,9 @@ DESCRIPTION
 ---------------------------------------
 `espowerify` is a [browserify](http://browserify.org/) transform for [power-assert](http://github.com/power-assert-js/power-assert).
 
-`espowerify` applies [espower](http://github.com/power-assert-js/espower) to target sources through browserify transform chain. `espower` manipulates assertion expression (JavaScript Code) represented as [Mozilla JavaScript AST](https://developer.mozilla.org/en-US/docs/SpiderMonkey/Parser_API), to instrument power-assert feature into the code.
+`espowerify` applies [espower](http://github.com/power-assert-js/espower) to target sources through browserify transform chain. `espower` manipulates assertion expression (JavaScript Code) represented as AST defined in [The ESTree Spec](https://github.com/estree/estree) (formerly known as [Mozilla SpiderMonkey Parser API](https://developer.mozilla.org/en-US/docs/SpiderMonkey/Parser_API)), to instrument power-assert feature into the code.
 
-Please note that `espowerify` is a beta version product. Pull-requests, issue reports and patches are always welcomed.
+Pull-requests, issue reports and patches are always welcomed.
 
 See [power-assert](http://github.com/power-assert-js/power-assert) project for more documentation.
 
