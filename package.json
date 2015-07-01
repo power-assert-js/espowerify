@@ -16,13 +16,13 @@
   ],
   "dependencies": {
     "espower-source": "git://github.com/power-assert-js/espower-source.git#source-root",
-    "through": "~2.3.6",
+    "through": "^2.3.0",
     "xtend": "^4.0.0"
   },
   "devDependencies": {
     "convert-source-map": "^1.1.1",
-    "jshint": "~2.8.0",
-    "mocha": "~2.2.5"
+    "jshint": "^2.8.0",
+    "mocha": "^2.2.5"
   },
   "engines": {
     "node": ">=0.8.0",
