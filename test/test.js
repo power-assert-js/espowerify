@@ -1,3 +1,4 @@
+delete require.cache[require.resolve('..')];
 var espowerify = require('..');
 var convert = require('convert-source-map');
 var fs = require('fs');
