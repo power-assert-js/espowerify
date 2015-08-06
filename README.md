@@ -1,9 +1,10 @@
 espowerify
 ================================
 
-[![Build Status](https://travis-ci.org/power-assert-js/espowerify.svg?branch=master)](https://travis-ci.org/power-assert-js/espowerify)
-[![NPM version](https://badge.fury.io/js/espowerify.svg)](http://badge.fury.io/js/espowerify)
-[![Dependency Status](https://gemnasium.com/power-assert-js/espowerify.svg)](https://gemnasium.com/power-assert-js/espowerify)
+[![Build Status][travis-image]][travis-url]
+[![NPM package][npm-image]][npm-url]
+[![Dependency Status][depstat-image]][depstat-url]
+[![License][license-image]][license-url]
 
 Browserify transform for power-assert.
 
@@ -154,3 +155,16 @@ CONTRIBUTORS
 LICENSE
 ---------------------------------------
 Licensed under the [MIT](https://github.com/power-assert-js/espowerify/blob/master/MIT-LICENSE.txt) license.
+
+
+[npm-url]: https://npmjs.org/package/espowerify
+[npm-image]: https://badge.fury.io/js/espowerify.svg
+
+[travis-url]: http://travis-ci.org/power-assert-js/espowerify
+[travis-image]: https://secure.travis-ci.org/power-assert-js/espowerify.svg?branch=master
+
+[depstat-url]: https://gemnasium.com/power-assert-js/espowerify
+[depstat-image]: https://gemnasium.com/power-assert-js/espowerify.svg
+
+[license-url]: https://github.com/power-assert-js/espowerify/blob/master/MIT-LICENSE.txt
+[license-image]: http://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat
