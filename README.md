@@ -22,9 +22,9 @@ See [power-assert](http://github.com/power-assert-js/power-assert) project for m
 FAQ
 ---------------------------------------
 
-#### espowerify does not work with babelify
+#### espowerify does not work with babelify!!
 
-espowerify does not work with babel/babelify since babel 5.0 due to transpiled code change. Please [use babel-plugin-espower instead](https://github.com/power-assert-js/babel-plugin-espower#with-babelify).
+espowerify does not work with [babelify](https://github.com/babel/babelify) due to the change of transpiled code since babel 5.0. Please use [babel-plugin-espower with babelify](https://github.com/power-assert-js/babel-plugin-espower#with-babelify).
 
 
 CHANGELOG
