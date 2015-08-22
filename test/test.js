@@ -1,11 +1,13 @@
-var espowerify = require('..'),
-    fs = require('fs'),
-    Stream = require('stream'),
-    assert = require('assert');
+delete require.cache[require.resolve('..')];
+var espowerify = require('..');
+var convert = require('convert-source-map');
+var fs = require('fs');
+var Stream = require('stream');
+var assert = require('assert');
 
 describe('default case', function() {
     var stream = espowerify(
-        '/absolute/path/to/test/fixtures/example.js',
+        process.cwd() + '/test/fixtures/example.js',
         {
             _flags: {
                 entries: [
@@ -28,6 +30,8 @@ describe('default case', function() {
         });
         stream.on('end', function() {
             var expected = fs.readFileSync('test/expected/example.js', 'utf8');
+            var map = convert.fromSource(output).toObject();
+            assert.equal(map.sources[0], 'test/fixtures/example.js');
             assert.equal(output, expected);
             done();
         });
@@ -38,7 +42,7 @@ describe('default case', function() {
 
 describe('with customized options', function() {
     var stream = espowerify(
-        '/absolute/path/to/test/fixtures/customized.js',
+        process.cwd() + '/test/fixtures/customized.js',
         {
             _flags: {
                 entries: [
@@ -66,6 +70,8 @@ describe('with customized options', function() {
         });
         stream.on('end', function() {
             var expected = fs.readFileSync('test/expected/customized.js', 'utf8');
+            var map = convert.fromSource(output).toObject();
+            assert.equal(map.sources[0], 'test/fixtures/customized.js');
             assert.equal(output, expected);
             done();
         });
@@ -99,6 +105,8 @@ describe('incoming code with SourceMap comment', function() {
         });
         stream.on('end', function() {
             var expected = fs.readFileSync('test/expected/with-sourcemap.js', 'utf8');
+            var map = convert.fromSource(output).toObject();
+            assert.equal(map.sources[0], '/absolute/path/to/coffee_script_test.coffee');
             assert.equal(output, expected);
             done();
         });
@@ -109,7 +117,7 @@ describe('incoming code with SourceMap comment', function() {
 
 describe('when filepath is not in _flags.entries', function() {
     var stream = espowerify(
-        '/absolute/path/to/test/fixtures/example.js',
+        process.cwd() + '/test/fixtures/example.js',
         {
             _flags: {
                 entries: [
@@ -141,7 +149,7 @@ describe('when filepath is not in _flags.entries', function() {
 });
 
 describe('without _flags (browserify prior to 5.13.0)', function() {
-    var stream = espowerify('/absolute/path/to/test/fixtures/example.js');
+    var stream = espowerify(process.cwd() + '/test/fixtures/example.js');
     
     it('should return a stream', function() {
         assert(stream instanceof Stream);
@@ -164,7 +172,7 @@ describe('without _flags (browserify prior to 5.13.0)', function() {
 
 describe('when incoming code is JSON file', function() {
     var stream = espowerify(
-        '/absolute/path/to/test/fixtures/data.json',
+        process.cwd() + '/test/fixtures/data.json',
         {
             _flags: {
                 basedir: '/absolute/path/to',
