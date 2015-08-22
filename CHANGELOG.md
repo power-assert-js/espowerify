@@ -1,3 +1,11 @@
+## [1.0.0](https://github.com/power-assert-js/espowerify/releases/tag/v1.0.0) (2015-08-22)
+
+
+#### Features
+
+* [use process.cwd() for default sourceRoot](https://github.com/power-assert-js/espowerify/pull/8)
+
+
 ### [0.10.1](https://github.com/power-assert-js/espowerify/releases/tag/v0.10.1) (2015-06-10)
 
 
