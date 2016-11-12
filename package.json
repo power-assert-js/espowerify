@@ -33,8 +33,7 @@
     "CHANGELOG.md",
     "README.md",
     "index.js",
-    "package.json",
-    "test"
+    "package.json"
   ],
   "homepage": "https://github.com/power-assert-js/espowerify",
   "keywords": [
