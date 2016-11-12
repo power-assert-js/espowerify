@@ -142,6 +142,16 @@ If callee name (for example, `assert.equal`) matches exactly and number of argum
 Detection is done by [escallmatch](http://github.com/twada/escallmatch). Any arguments enclosed in bracket (for example, `[message]`) means optional parameters. Without bracket means mandatory parameters.
 
 
+OUR SUPPORT POLICY
+---------------------------------------
+
+We support Node under maintenance. In other words, we stop supporting old Node version when [their maintenance ends](https://github.com/nodejs/LTS).
+
+This means that any other environment is not supported.
+
+NOTE: If espowerify works in any of the unsupported environments, it is purely coincidental and has no bearing on future compatibility. Use at your own risk.
+
+
 AUTHOR
 ---------------------------------------
 * [Takuto Wada](http://github.com/twada)
